@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hub | Discover What's Next</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo"><span class="logo-icon">✦</span> TECH<span>HUB</span></a>
+        <nav>
+            <a href="#discover">Discover</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#saved">My Collection</a>
+        </nav>
+        <button class="profile-button" id="profileButton">Student Portal ↗</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">THE FUTURE STARTS HERE</span>
+                <h1>Discover technology.<br><span>Build what's next.</span></h1>
+                <p>Explore the tools, platforms and technologies shaping tomorrow. Find your next favourite.</p>
+                <a href="#discover" class="primary-button">Explore technologies →</a>
+            </div>
+            <div class="hero-visual">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="hero-core">TECH<br>HUB</div>
+                <div class="floating-chip chip-one">AI / ML</div>
+                <div class="floating-chip chip-two">CLOUD</div>
+                <div class="floating-chip chip-three">CODE</div>
+            </div>
+        </section>
+
+        <section class="dashboard" id="dashboard">
+            <div class="stat-card"><span>Total technologies</span><strong id="totalCount">06</strong><small>Available to explore</small></div>
+            <div class="stat-card"><span>My favourites</span><strong id="favouriteCount">00</strong><small>Technologies saved</small></div>
+            <div class="stat-card"><span>Categories</span><strong id="categoryCount">04</strong><small>Areas of technology</small></div>
+            <div class="stat-card highlight-card"><span>Your next step</span><strong>Explore</strong><small>Discover something new</small></div>
+        </section>
+
+        <section class="joke-panel">
+            <div>
+                <span class="eyebrow">API PLAYGROUND</span>
+                <h2>Need a coding break?</h2>
+                <p id="jokeSetup">Your next programming joke is waiting.</p>
+                <p id="jokePunchline"></p>
+            </div>
+            <button id="jokeButton" class="primary-button">Get a programming joke →</button>
+        </section>
+
+        <section class="discover-section" id="discover">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR TECH PLAYGROUND</span>
+                    <h2>Explore the collection</h2>
+                    <p>Search, filter and save technologies you love.</p>
+                </div>
+                <span class="live-indicator">● LIVE COLLECTION</span>
+            </div>
+
+            <div class="toolbar">
+                <input type="search" id="searchInput" placeholder="⌕  Search technologies..." aria-label="Search technologies">
+                <div class="filters" id="categoryFilters">
+                    <button class="filter-button active" data-category="All">All</button>
+                    <button class="filter-button" data-category="AI">AI &amp; Data</button>
+                    <button class="filter-button" data-category="Cloud">Cloud</button>
+                    <button class="filter-button" data-category="Web">Web Dev</button>
+                    <button class="filter-button" data-category="Security">Security</button>
+                </div>
+            </div>
+
+            <div class="results-line">
+                <span id="resultsMessage">Showing all technologies</span>
+                <button id="showFavourites" class="text-button" aria-pressed="false">♥ Show favourites</button>
+            </div>
+
+            <div class="tech-grid" id="techGrid"></div>
+            <p class="empty-message" id="emptyMessage" hidden>No technologies found. Try another search.</p>
+        </section>
+
+        <section class="challenge-banner" id="saved">
+            <div>
+                <span class="eyebrow">YOUR MISSION</span>
+                <h2>Curiosity creates innovation.</h2>
+                <p>Explore a technology. Save your favourites. Start building your future.</p>
+            </div>
+            <div class="banner-symbol">✳</div>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" id="detailModal" hidden>
+        <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="closeModal" aria-label="Close details">×</button>
+            <span class="eyebrow">TECHNOLOGY SPOTLIGHT</span>
+            <h2 id="modalTitle">Technology</h2>
+            <p id="modalDetails"></p>
+        </section>
+    </div>
+
+    <footer>
+        <a href="#" class="logo">✦ TECH<span>HUB</span></a>
+        <p>Built for curious minds. Powered by possibilities.</p>
+        <span>© 2026 Tech Hub</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
